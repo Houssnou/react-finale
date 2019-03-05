@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import { GeoJSONLayer } from "react-mapbox-gl";
 
 const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoiaG91c3Nub3UiLCJhIjoiY2pzb3Y1MzFjMHF2NDQzbXJiZnFyYXJxYyJ9.4Hxx99nq1-FphHd_fNljag"
 });
+
 
 class Mapbox extends Component {
   state = {}
@@ -22,6 +24,14 @@ class Mapbox extends Component {
           layout={{ "icon-image": "marker-15" }}>
           <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
         </Layer>
+        <GeoJSONLayer
+          
+          symbolLayout={{
+            "text-field": "{place}",
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+          }} />
       </Map>
     )
   }

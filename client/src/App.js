@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Mapbox from './components/mapbox'
+import Mapbox from './components/mapbox';
+import Fullmapbox from './components/mapboxhtml'
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         </p>
         </div>
 
-        <Mapbox/>
+        <Fullmapbox/>
       </div>
     );
   }
